@@ -15,6 +15,39 @@ body {
   margin-top: 50px;
 }
 
+.Register
+{
+  font-family: Arial, sans-serif;
+  background-color: #d2d9df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  margin-top: 650px;
+}
+
+.edit-profile
+{
+  margin-top: 150px;
+}
+
+/* Basic table styling */
+
+th, td {
+  border: 2px solid #2c2c2c; 
+  padding: 10px; 
+  text-align: center; 
+  border-radius: 5px;
+  background-color: #d4d4d4;
+}
+
+th {
+  background-color: #ffca95; 
+  font-weight: bold; 
+}
+
+
 .form-container {
   max-width: 600px;
   width: 100%;
@@ -30,6 +63,7 @@ h1 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .form-group {

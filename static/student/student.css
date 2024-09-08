@@ -164,39 +164,6 @@ body {
     -moz-transform: rotateY(179.9deg);
     transform: rotateY(179.9deg);
 }
-  
- 
-/* Side Panel Styles*/
-/*
-.side-panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px; //Increased width to 250px
-    height: 100vh;
-    background-color: #337ab7;
-    padding: 20px;
-    border-right: 1px solid #ccc;
-    color: #fff;
-}
-
-.side-panel button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f5821e;
-    color: #fff;
-    cursor: pointer;
-}
-
-.side-panel button:hover {
-    background-color: #fff;
-    color: #f5821e;
-} 
-*/
 
 .main-content {
     margin-left: 250px; 
