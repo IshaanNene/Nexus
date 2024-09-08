@@ -1,137 +1,157 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d2d9df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f5821e;
+  border: 1px solid #f5821e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #666;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f5821e;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.upload-btn {
+  padding: 10px;
+  border: 1px solid #f5821e;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f5821e;
+}
+
+.submit-btn{
+  background-color: #dbeadb;
+  color: #383535;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.5s, box-shadow 0.5s, opacity 0.5s, color 0.5s, border-color 0.5s;
+}
+
+.submit-btn:hover{
+  background-color: #3da240;
+  color: #dbeadb;
+  box-shadow: 5px 3px 10px rgb(81, 80, 80);
+}
+
+/* Colorful Accents */
+
+.form-group:nth-child(odd) {
+  background-color: #f5821e;
+}
+
+.form-group:nth-child(even) {
+  background-color: #f5821e;
+}
+
+label {
+  color: #000000;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 92px;
+  width: 200px; /* adjust the width to fit your logo */
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+
+.logo-container
+{
+  background-color: #6d93b6;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #337ab7;
+  box-shadow: 0 0 10px rgba(51, 122, 183, 0.5);
+}
+
+.submit-btn {
+  background-color: #ebebec;
+}
   
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #337ab7;
-  }
+.submit-btn:hover {
+  background-color: #4ec366;
+}
   
+@media (max-width: 768px) {
   .form-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f5821e;
-    border: 1px solid #f5821e;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    width: 90%;
+    margin: 20px auto;
   }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #666;
-  }
-  
-  input[type="text"],
-  input[type="date"],
-  input[type="number"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
+}
+
+@media (max-width: 480px) {
+  .form-container {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #f5821e;
-    border-radius: 5px;
-    font-size: 16px;
+    margin: 10px auto;
   }
-  
-  input[type="file"] {
-    padding: 10px;
-    border: 1px solid #f5821e;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f5821e;
+  .form-group {
+    margin-bottom: 15px;
   }
-  
-  input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-  
-  /* Colorful Accents */
-  
-  .form-group:nth-child(odd) {
-    background-color: #f5821e;
-  }
-  
-  .form-group:nth-child(even) {
-    background-color: #f5821e;
-  }
-  
-  label {
-    color: #000000;
-  }
-  .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .logo {
-    width: 140px; /* adjust the width to fit your logo */
-    height: auto;
-    margin-right: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  input[type="text"]:focus,
-  input[type="date"]:focus,
-  input[type="number"]:focus,
-  input[type="email"]:focus,
-  input[type="tel"]:focus,
-  select:focus,
-  textarea:focus {
-    border-color: #337ab7;
-    box-shadow: 0 0 10px rgba(51, 122, 183, 0.5);
-  }
-  
-  input[type="submit"] {
-    background-color: #337ab7;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #23527c;
-  }
-  
-  @media (max-width: 768px) {
-    .form-container {
-      width: 90%;
-      margin: 20px auto;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .form-container {
-      width: 100%;
-      margin: 10px auto;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-  }
+}

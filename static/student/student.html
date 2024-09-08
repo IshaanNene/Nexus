@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
     <title>InFeed</title>
     <link rel="stylesheet" href="student.css">
 </head>
 <body>
-    <div class="side-panel">
+    <!-- <div class="side-panel">
         <button class="student-btn">Student Profile</button>
         <button class="register-btn">Register</button>
         <button class="apply-interviews-btn">Apply for Interviews</button>
@@ -16,97 +16,273 @@
         <button class="edit-profile-btn">Edit Profile</button>
         <button class="contact-support-btn">Contact Support</button>
     </div>
+    </div> -->
+
+    <div class="logo-container">
+        <!--PESU LOGO-->
+        <img src="logoPesu.png" alt="College Logo" class="logo">
+    </div>
+
     <div class="main-content">
+
+        <div class="align">
+
+            <!--Apply for interview-->
+            <div class="card-container">  
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="interviewer.png" class="card-img" alt="interviewer">
+                            <h1><b>Apply for interview</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="interviewer.png" class="card-img" alt="interviewer">
+                            <button class="apply-interviews-btn">Apply for Interviews</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Student profile-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="profile.png" class="card-img" alt="profile">
+                            <h1><b>Student Profile</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="profile.png" class="card-img" alt="profile">
+                            <button class="student-btn">View Student Profile</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Register-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="interviewer.png" class="card-img" alt="register">
+                            <h1><b>Register</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="interviewer.png" class="card-img" alt="register">
+                            <button class="register-btn">Register</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--View interview schedule-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="interviewer.png" class="card-img" alt="interview-schedule">
+                            <h1><b>View Interview Schedule</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="interviewer.png" class="card-img" alt="interview-schedule">
+                            <button class="view-interview-schedule-btn">View Schedule</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--View feedback-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="interviewer.png" class="card-img" alt="feedback">
+                            <h1><b>View Feedback</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="interviewer.png" class="card-img" alt="feedback">
+                            <button class="view-feedback-btn">View Feedback</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Track progress-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="interviewer.png" class="card-img" alt="progress">
+                            <h1><b>Track Progress</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="interviewer.png" class="card-img" alt="progress">
+                            <button class="track-progress-btn">Track Progress</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Edit profile-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="edit-profile.png" class="card-img" alt="edit">
+                            <h1><b>Edit Profile</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="edit-profile.png" class="card-img" alt="edit">
+                            <button class="edit-profile-btn">Edit Profile</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Contact support-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="interviewer.png" class="card-img" alt="support">
+                            <h1><b>Contact Support</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <img src="interviewer.png" class="card-img" alt="support">
+                            <button class="contact-support-btn">Contact Support</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Event listener for the Register button
-        document.querySelector('.register-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const registerForm = document.createElement('iframe');
-            registerForm.src = 'register.html';
-            registerForm.frameBorder = '0';
-            registerForm.width = '100%';
-            registerForm.height = '100%';
-            document.querySelector('.main-content').appendChild(registerForm);
-        });
 
-        // Event listener for the Student Profile button
-        document.querySelector('.student-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const profileForm = document.createElement('iframe');
-            profileForm.src = 'student_profile.html';
-            profileForm.frameBorder = '0';
-            profileForm.width = '100%';
-            profileForm.height = '100%';
-            document.querySelector('.main-content').appendChild(profileForm);
-        });
 
-        // Event listener for the Apply for Interviews button
-        document.querySelector('.apply-interviews-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const applyForm = document.createElement('iframe');
-            applyForm.src = 'apply_for_interviews.html';
-            applyForm.frameBorder = '0';
-            applyForm.width = '100%';
-            applyForm.height = '100%';
-            document.querySelector('.main-content').appendChild(applyForm);
-        });
+        // // Event listener for the Register button
+        // document.querySelector('.register-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const registerForm = document.createElement('iframe');
+        //     registerForm.src = 'Register.html';
+        //     registerForm.frameBorder = '0';
+        //     registerForm.width = '100%';
+        //     registerForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(registerForm);
+        // });
 
-        // Event listener for the View Interview Schedule button
-        document.querySelector('.view-interview-schedule-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const scheduleForm = document.createElement('iframe');
-            scheduleForm.src = 'view_interview_schedule.html';
-            scheduleForm.frameBorder = '0';
-            scheduleForm.width = '100%';
-            scheduleForm.height = '100%';
-            document.querySelector('.main-content').appendChild(scheduleForm);
-        });
+        // // Event listener for the Student Profile button
+        // document.querySelector('.student-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const profileForm = document.createElement('iframe');
+        //     profileForm.src = 'student_profile.html';
+        //     profileForm.frameBorder = '0';
+        //     profileForm.width = '100%';
+        //     profileForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(profileForm);
+        // });
 
-        // Event listener for the View Feedback button
-        document.querySelector('.view-feedback-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const feedbackForm = document.createElement('iframe');
-            feedbackForm.src = 'view_feedback.html';
-            feedbackForm.frameBorder = '0';
-            feedbackForm.width = '100%';
-            feedbackForm.height = '100%';
-            document.querySelector('.main-content').appendChild(feedbackForm);
-        });
+        // // Event listener for the Apply for Interviews button
+        // document.querySelector('.apply-interviews-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const applyForm = document.createElement('iframe');
+        //     applyForm.src = 'apply_for_interviews.html';
+        //     applyForm.frameBorder = '0';
+        //     applyForm.width = '100%';
+        //     applyForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(applyForm);
+        // });
 
-        // Event listener for the Track Progress button
-        document.querySelector('.track-progress-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const progressForm = document.createElement('iframe');
-            progressForm.src = 'track_progress.html';
-            progressForm.frameBorder = '0';
-            progressForm.width = '100%';
-            progressForm.height = '100%';
-            document.querySelector('.main-content').appendChild(progressForm);
-        });
+        // // Event listener for the View Interview Schedule button
+        // document.querySelector('.view-interview-schedule-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const scheduleForm = document.createElement('iframe');
+        //     scheduleForm.src = 'view_interview_schedule.html';
+        //     scheduleForm.frameBorder = '0';
+        //     scheduleForm.width = '100%';
+        //     scheduleForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(scheduleForm);
+        // });
 
-        // Event listener for the Edit Profile button
-        document.querySelector('.edit-profile-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const editProfileForm = document.createElement('iframe');
-            editProfileForm.src = 'edit_profile.html';
-            editProfileForm.frameBorder = '0';
-            editProfileForm.width = '100%';
-            editProfileForm.height = '100%';
-            document.querySelector('.main-content').appendChild(editProfileForm);
-        });
+        // // Event listener for the View Feedback button
+        // document.querySelector('.view-feedback-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const feedbackForm = document.createElement('iframe');
+        //     feedbackForm.src = 'view_feedback.html';
+        //     feedbackForm.frameBorder = '0';
+        //     feedbackForm.width = '100%';
+        //     feedbackForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(feedbackForm);
+        // });
 
-        // Event listener for the Contact Support button
-        document.querySelector('.contact-support-btn').addEventListener('click', function() {
+        // // Event listener for the Track Progress button
+        // document.querySelector('.track-progress-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const progressForm = document.createElement('iframe');
+        //     progressForm.src = 'track_progress.html';
+        //     progressForm.frameBorder = '0';
+        //     progressForm.width = '100%';
+        //     progressForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(progressForm);
+        // });
+
+        // // Event listener for the Edit Profile button
+        // document.querySelector('.edit-profile-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const editProfileForm = document.createElement('iframe');
+        //     editProfileForm.src = 'edit_profile.html';
+        //     editProfileForm.frameBorder = '0';
+        //     editProfileForm.width = '100%';
+        //     editProfileForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(editProfileForm);
+        // });
+
+        // // Event listener for the Contact Support button
+        // document.querySelector('.contact-support-btn').addEventListener('click', function() {
+        //     document.querySelector('.main-content').innerHTML = '';
+        //     const contactSupportForm = document.createElement('iframe');
+        //     contactSupportForm.src = 'contact_support.html';
+        //     contactSupportForm.frameBorder = '0';
+        //     contactSupportForm.width = '100%';
+        //     contactSupportForm.height = '100%';
+        //     document.querySelector('.main-content').appendChild(contactSupportForm);
+        // });
+
+        const loadContent = (src) => {
             document.querySelector('.main-content').innerHTML = '';
-            const contactSupportForm = document.createElement('iframe');
-            contactSupportForm.src = 'contact_support.html';
-            contactSupportForm.frameBorder = '0';
-            contactSupportForm.width = '100%';
-            contactSupportForm.height = '100%';
-            document.querySelector('.main-content').appendChild(contactSupportForm);
-        });
+            const iframe = document.createElement('iframe');
+            iframe.src = src;
+            iframe.frameBorder = '0';
+            iframe.width = '100%';
+            iframe.height = '100%';
+            document.querySelector('.main-content').appendChild(iframe);
+        };
+
+        document.querySelector('.register-btn').addEventListener('click', () => loadContent('Register.html'));
+        document.querySelector('.student-btn').addEventListener('click', () => loadContent('student_profile.html'));
+        document.querySelector('.apply-interviews-btn').addEventListener('click', () => loadContent('apply_for_interviews.html'));
+        document.querySelector('.view-interview-schedule-btn').addEventListener('click', () => loadContent('view_interview_schedule.html'));
+        document.querySelector('.view-feedback-btn').addEventListener('click', () => loadContent('view_feedback.html'));
+        document.querySelector('.track-progress-btn').addEventListener('click', () => loadContent('track_progress.html'));
+        document.querySelector('.edit-profile-btn').addEventListener('click', () => loadContent('edit_profile.html'));
+        document.querySelector('.contact-support-btn').addEventListener('click', () => loadContent('contact_support.html'));
+
     </script>
 </body>
 </html>
