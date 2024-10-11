@@ -9,6 +9,7 @@
     <!--PESU LOGO-->
     <div class="logo-container">
         <img src="logoPesu.png" alt="College Logo" class="logo">
+        <button class="home-btn">HOME</button>
     </div>
 
     <div class="main-content">
@@ -156,6 +157,7 @@
         };
 
 
+        document.querySelector('.home-btn').addEventListener('click', () => {location.reload();});  //CURRENTLY ACTS LIKE RELOAD
         document.querySelector('.schedule-interview-btn').addEventListener('click', () => loadContent('schedule_interviews.html'));
         document.querySelector('.provide-feedback-btn').addEventListener('click', () => loadContent('provide_feedback.html'));
         document.querySelector('.view-candidate-profiles-btn').addEventListener('click', () => loadContent('view_candidate_profiles.html'));

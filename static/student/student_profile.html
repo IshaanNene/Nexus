@@ -7,7 +7,16 @@
 </head>
 <body>
     <div class="form-container">
+
         <h1>Student Profile</h1>
+
+        <div class="profile-container">
+            <div class="profile-pic">
+                <img id="profile-pic-preview" src="default-profile-pic.png" alt="Profile Picture">
+                <input type="file" id="profile-pic-input" accept="image/*">
+            </div>
+        </div>
+        
         <div class="profile-info">
             <p><strong>Name:</strong> John Doe</p>
             <p><strong>Date of Birth:</strong> 2000-01-01</p>
@@ -25,7 +34,27 @@
             <p><strong>Address:</strong> 1234 Elm Street, Springfield</p>
             <p><strong>Email:</strong> johndoe@example.com</p>
             <p><strong>Contact Number:</strong> 1234567890</p>
+
+            <div class="resume">
+                <br>
+                <a href="https://www.google.com/" class="resume-link" target="_blank">Click to view resume</a>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('profile-pic-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                document.getElementById('profile-pic-preview').src = e.target.result;
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>

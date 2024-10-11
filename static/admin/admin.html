@@ -9,6 +9,7 @@
     <!--PESU LOGO-->
     <div class="logo-container">
         <img src="logoPesu.png" alt="College Logo" class="logo">
+        <button class="home-btn">HOME</button>
     </div>
 
     <div class="main-content">
@@ -25,7 +26,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="apply-interviews-btn">User Management</button>
+                            <button class="user-management-btn">User Management</button>
                         </article>
                     </div>
                 </div>
@@ -41,7 +42,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="student-btn">Interview Management</button>
+                            <button class="interview-management-btn">Interview Management</button>
                         </article>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="register-btn">Manage Feedback Templates</button>
+                            <button class="manage-feedback-templates-btn">Manage Feedback Templates</button>
                         </article>
                     </div>
                 </div>
@@ -73,7 +74,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="view-interview-schedule-btn">Analytics and Reporting</button>
+                            <button class="analytics-and-reporting-btn">Analytics and Reporting</button>
                         </article>
                     </div>
                 </div>
@@ -89,7 +90,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="view-feedback-btn">View and Export Data</button>
+                            <button class="view-and-export-data-btn">View and Export Data</button>
                         </article>
                     </div>
                 </div>
@@ -105,7 +106,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="view-feedback-btn">Support and Issue Resolution</button>
+                            <button class="support-and-issue-resolution-btn">Support and Issue Resolution</button>
                         </article>
                     </div>
                 </div>
@@ -121,7 +122,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="track-progress-btn">Communications Management</button>
+                            <button class="communications-management-btn">Communications Management</button>
                         </article>
                     </div>
                 </div>
@@ -137,7 +138,7 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="edit-profile-btn">System Configuration</button>
+                            <button class="system-configurations-btn">System Configuration</button>
                         </article>
                     </div>
                 </div>
@@ -153,12 +154,17 @@
                     </div>
                     <div class="card-back">
                         <article class="card-back-content">
-                            <button class="contact-support-btn">Audit Logs</button>
+                            <button class="audit-logs-btn">Audit Logs</button>
                         </article>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.home-btn').addEventListener('click', () => {location.reload();});  //CURRENTLY ACTS LIKE RELOAD
+    </script>
+
 </body>
 </html>
