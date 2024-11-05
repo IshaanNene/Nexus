@@ -3,110 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <title>InFeed</title>
-    <link rel="stylesheet" href="interviewer.css">
+    <link rel="stylesheet" href="/static/css/interviewer.css">
 </head>
 <body>
-    <div class="side-panel">
-        <button class="interviewer-btn">Interviewer</button>
-        <button class="schedule-interviews-btn">Schedule Interviews</button>
-        <button class="provide-feedback-btn">Provide Feedback</button>
-        <button class="view-candidate-profiles-btn">View Candidate Profiles</button>
-        <button class="generate-reports-btn">Generate Reports</button>
-        <button class="manage-interview-slots-btn">Manage Interview Slots</button>
-        <button class="view-feedback-history-btn">View Feedback History</button>
-        <button class="communicate-with-students-btn">Communicate with Students</button>
+    <!--PESU LOGO-->
+    <div class="logo-container">
+        <img src="/static/photos/logoPesu.png" alt="College Logo" class="logo">
+        <button class="home-btn">HOME</button>
     </div>
+
     <div class="main-content">
+
+        <div class="align">
+
+            <!--Schedule interview-->
+            <div class="card-container">  
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="/static/photos/schedule.png" class="card-img" alt="interviewer">
+                            <h1><b>Schedule interview</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <p> Schedule an Interview with a Candidate </p>
+                            <button class="schedule-interview-btn">Schedule Interviews</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Provide feedback-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="/static/photos/feedback.png" class="card-img" alt="profile">
+                            <h1><b>Provide Feedback</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <p> Provide feedback to a Candidate </p>
+                            <button class="provide-feedback-btn">Provide Feedback</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--View Candidate Profiles-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="/static/photos/view-candidate-profile.png" class="card-img" alt="register">
+                            <h1><b>View Candidate Profiles</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <p> View all Candidate Profiles </p>
+                            <button class="view-candidate-profiles-btn">View Candidate Profiles</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Generate Report-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="/static/photos/register.png" class="card-img" alt="interview-schedule">
+                            <h1><b>Generate Report</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <p> Generate Statistical Reports </p>
+                            <button class="generate-reports-btn">Generate Report</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Manage Interview Slots-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="/static/photos/manage-interview-slots.png" class="card-img" alt="feedback">
+                            <h1><b>Manage Interview Slots</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <p> Manage Upcoming Interview Slots </p>
+                            <button class="manage-interview-slots-btn">Manage Interview Slots</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--View Feedback History-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="/static/photos/feedback-history.png" class="card-img" alt="progress">
+                            <h1><b>View Feedback History</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <p> View detailed Feedback History </p>
+                            <button class="view-feedback-history-btn">View Feedback History</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Communicate With Students-->
+            <div class="card-container">
+                <div class="card-vertical">
+                    <div class="card-front">
+                        <article class="card-front-content">
+                            <img src="/static/photos/communicate.png" class="card-img" alt="edit">
+                            <h1><b>Communicate With Students</b></h1>
+                        </article>
+                    </div>
+                    <div class="card-back">
+                        <article class="card-back-content">
+                            <p> Send message to a Candidate </p>
+                            <button class="communicate-with-students-btn">Communicate With Students</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Event listener for the Interviewer button
-        document.querySelector('.interviewer-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const interviewerForm = document.createElement('iframe');
-            interviewerForm.src = 'interviewer.html';
-            interviewerForm.frameBorder = '0';
-            interviewerForm.width = '100%';
-            interviewerForm.height = '100%';
-            document.querySelector('.main-content').appendChild(interviewerForm);
-        });
 
-        // Event listener for the Schedule Interviews button
-        document.querySelector('.schedule-interviews-btn').addEventListener('click', function() {
+        const loadContent = (src) => {
             document.querySelector('.main-content').innerHTML = '';
-            const scheduleForm = document.createElement('iframe');
-            scheduleForm.src = 'schedule_interviews.html';
-            scheduleForm.frameBorder = '0';
-            scheduleForm.width = '100%';
-            scheduleForm.height = '100%';
-            document.querySelector('.main-content').appendChild(scheduleForm);
-        });
+            const iframe = document.createElement('iframe');
+            iframe.src = src;
+            iframe.frameBorder = '0';
+            iframe.width = '100%';
+            iframe.height = '100%';
+            document.querySelector('.main-content').appendChild(iframe);
+        };
 
-        // Event listener for the Provide Feedback button
-        document.querySelector('.provide-feedback-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const feedbackForm = document.createElement('iframe');
-            feedbackForm.src = 'provide_feedback.html';
-            feedbackForm.frameBorder = '0';
-            feedbackForm.width = '100%';
-            feedbackForm.height = '100%';
-            document.querySelector('.main-content').appendChild(feedbackForm);
+        document.querySelector('.home-btn').addEventListener('click', () => {
+            window.location.href = 'interviewer.html';
         });
+        document.querySelector('.schedule-interview-btn').addEventListener('click', () => loadContent('schedule_interviews.html'));
+        document.querySelector('.provide-feedback-btn').addEventListener('click', () => loadContent('provide_feedback.html'));
+        document.querySelector('.view-candidate-profiles-btn').addEventListener('click', () => loadContent('view_candidate_profiles.html'));
+        document.querySelector('.generate-reports-btn').addEventListener('click', () => loadContent('generate_reports.html'));
+        document.querySelector('.manage-interview-slots-btn').addEventListener('click', () => loadContent('manage_interview_slots.html'));
+        document.querySelector('.view-feedback-history-btn').addEventListener('click', () => loadContent('view_feedback_history.html'));
+        document.querySelector('.communicate-with-students-btn').addEventListener('click', () => loadContent('communicate_with_students.html'));
 
-        // Event listener for the View Candidate Profiles button
-        document.querySelector('.view-candidate-profiles-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const candidateProfilesForm = document.createElement('iframe');
-            candidateProfilesForm.src = 'view_candidate_profiles.html';
-            candidateProfilesForm.frameBorder = '0';
-            candidateProfilesForm.width = '100%';
-            candidateProfilesForm.height = '100%';
-            document.querySelector('.main-content').appendChild(candidateProfilesForm);
-        });
-
-        // Event listener for the Generate Reports button
-        document.querySelector('.generate-reports-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const reportsForm = document.createElement('iframe');
-            reportsForm.src = 'generate_reports.html';
-            reportsForm.frameBorder = '0';
-            reportsForm.width = '100%';
-            reportsForm.height = '100%';
-            document.querySelector('.main-content').appendChild(reportsForm);
-        });
-
-        // Event listener for the Manage Interview Slots button
-        document.querySelector('.manage-interview-slots-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const manageSlotsForm = document.createElement('iframe');
-            manageSlotsForm.src = 'manage_interview_slots.html';
-            manageSlotsForm.frameBorder = '0';
-            manageSlotsForm.width = '100%';
-            manageSlotsForm.height = '100%';
-            document.querySelector('.main-content').appendChild(manageSlotsForm);
-        });
-
-        // Event listener for the View Feedback History button
-        document.querySelector('.view-feedback-history-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const feedbackHistoryForm = document.createElement('iframe');
-            feedbackHistoryForm.src = 'view_feedback_history.html';
-            feedbackHistoryForm.frameBorder = '0';
-            feedbackHistoryForm.width = '100%';
-            feedbackHistoryForm.height = '100%';
-            document.querySelector('.main-content').appendChild(feedbackHistoryForm);
-        });
-
-        // Event listener for the Communicate with Students button
-        document.querySelector('.communicate-with-students-btn').addEventListener('click', function() {
-            document.querySelector('.main-content').innerHTML = '';
-            const communicateForm = document.createElement('iframe');
-            communicateForm.src = 'communicate_with_students.html';
-            communicateForm.frameBorder = '0';
-            communicateForm.width = '100%';
-            communicateForm.height = '100%';
-            document.querySelector('.main-content').appendChild(communicateForm);
-        });
     </script>
 </body>
 </html>
